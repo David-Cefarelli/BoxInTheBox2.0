@@ -1,4 +1,3 @@
-
 var cart = [];
 var total = 0;
 var productCont = 0;
@@ -90,4 +89,18 @@ function removeProduct(productName) {
   storedProducts = storedProducts.filter(item => item.name !== productName);
 
   localStorage.setItem('productcart', JSON.stringify(storedProducts));
+}
+function filterProducts(name) {
+  // const searchValue = document.getElementById('search').value.toLowerCase();
+  const products = document.querySelectorAll('.catalogo-item');
+
+  products.forEach(product => {
+    const productName = product.querySelector('h3').textContent.toLowerCase();
+    console.log("---Ejecutado")
+    if (productName.includes(name.toLowerCase())) {
+      product.style.display = '';  // Mostrar el producto
+    } else {
+      product.style.display = 'none';  // Ocultar el producto
+    }
+  });
 }
