@@ -21,7 +21,7 @@
            </div>
             <div class="nav-form">
                 <form action="">
-                    <input class="nav" type="search" placeholder="Buscar" name="q" autocomplete="off">
+                    <input class="nav" type="search" placeholder="Buscar" name="q" autocomplete="off" oninput="filterProducts(this.value)" onkeyup="checkEnter(event, this.value)">
                 </form>
                 <nav class="navbar">
                     <a href="index.html">Nuevo</a>
