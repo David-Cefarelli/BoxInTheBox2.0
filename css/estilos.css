@@ -229,13 +229,17 @@ body {
 
 
 .catalogo-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 20px; 
+    display: flex;
+    flex-wrap: wrap; 
+    justify-content: center; 
+    gap: 20px;
 }
 
 
 .catalogo-item {
+    width: 100%;
+    max-width: 300px; 
+    height: auto;
     background-color: white;
     border-radius: 10px;
     overflow: hidden;
