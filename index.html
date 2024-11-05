@@ -5,7 +5,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Ingreso a Box In The Box</title>
   <style>
-    /* Estilos Generales */
     * {
       box-sizing: border-box;
       margin: 0;
@@ -23,7 +22,6 @@
       text-align: center;
     }
 
-    /* Contenedor Principal */
     .container {
       max-width: 500px;
       padding: 40px;
@@ -33,7 +31,6 @@
       position: relative;
     }
 
-    /* Logo y Texto */
     .logo-container {
       display: flex;
       align-items: center;
@@ -65,7 +62,6 @@
       margin-bottom: 30px;
     }
 
-    /* Botón de Ingreso */
     .button-container {
       position: relative;
     }
@@ -89,7 +85,6 @@
       background-color: #D32F2F;
     }
 
-    /* Efecto de Cargando */
     .button::before {
       content: "";
       position: absolute;
@@ -105,7 +100,6 @@
       left: 100%;
     }
 
-    /* Animación de Carga */
     .loading-animation {
       display: none;
       margin-top: 10px;
@@ -131,17 +125,16 @@
   </style>
 </head>
 <body>
-  <div class="container">
-    <!-- Logo y Texto -->
+  <div class="container">   
     <div class="logo-container">
-      <img src="./img/logo.png" alt="Logo" class="logo-img"> <!-- Reemplaza "ruta-al-logo.png" con la ruta a tu logo -->
+      <img src="./img/logo.png" alt="Logo" class="logo-img"> 
       <div class="logo-text">Box In The Box</div>
     </div>
 
     <h1>Bienvenido</h1>
     <p>Descubre productos exclusivos en nuestra tienda.</p>
 
-    <!-- Botón de Ingreso con Animación de Carga -->
+   
     <div class="button-container">
       <a href="#" class="button" onclick="startLoading()">Ingresar</a>
       <div class="loading-animation" id="loading">
@@ -152,11 +145,10 @@
 
   <script>
     function startLoading() {
-      // Ocultar el botón e iniciar la animación de carga
+     
       document.querySelector('.button').style.display = 'none';
       document.getElementById('loading').style.display = 'block';
 
-      // Simulación de carga y redirección
       setTimeout(() => {
         window.location.href = "./html/index.html";
       }, 2000);
